@@ -55,10 +55,8 @@ class _PriceScreenState extends State<PriceScreen> {
 
   String value = '?';
 
-  //TODO 7: Figure out a way of displaying a '?' on screen while we're waiting for the price data to come back. Hint: You'll need a ternary operator.
   bool isWaiting = false;
 
-  //TODO 6: Update this method to receive a Map containing the crypto:price key value pairs. Then use that map to update the CryptoCards.
   void getData() async {
     isWaiting = true;
     try {
@@ -79,7 +77,6 @@ class _PriceScreenState extends State<PriceScreen> {
     print(cryptoRates);
   }
 
-  //TODO: For bonus points, create a method that loops through the cryptoList and generates a CryptoCard for each.
   Column createCryptoCards() {
     List<CryptoCard> cryptoCards = [];
     for (String item in cryptoList) {
